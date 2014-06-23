@@ -1,0 +1,34 @@
+﻿/*#region Overall Master settings*/
+body, footer {
+    background-color: #ffffff;
+	width: 100%;
+    margin: 0 auto;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+.lbltxtalign {
+    text-align: right;
+    padding-top: 4px;
+}
+
+.lblalign {
+	padding-top: 4px;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+input[type=text] {
+    width: 100%;}
+
+
+.nav-image {
+    padding: 0;
+}
+
+/*#endregion*/

@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>SafeReturn</title>
+
+    <link rel="stylesheet" type="text/css" href="Styles/Style.css" />
+    <link href="Styles/bootstrap.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/validation.js"></script>
+
+    <asp:ContentPlaceHolder id="headPlaceHolder" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <ul class="nav">
+                        <li class="brand">
+                            SafeReturn
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="hylHome" 
+                                runat="server"
+                                NavigateUrl="~/home.aspx"
+                                Text="Home">
+                            </asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="hylSearch" 
+                                runat="server"
+                                NavigateUrl="~/search.aspx"
+                                Text="Search">
+                            </asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="hylAbout" 
+                                runat="server"
+                                Text="About"
+                                NavigateUrl="~/about.aspx">
+                            </asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lbtnLogout" 
+                                runat="server"
+                                Text="Logout"
+                                OnClick="lbtnLogout_Click"
+                                CausesValidation="false">
+                            </asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+
+        <article>
+            <asp:ContentPlaceHolder id="articlePlaceHolder" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </article>
+<%--        <footer>
+            <p class="container">Last refresh: <%: DateTime.Now.ToString()%></p>
+        </footer>--%>
+    </form>
+</body>
+</html>
